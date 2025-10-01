@@ -2,7 +2,8 @@
 
 A compact, shift-ready collection of SOC L1 playbooks and step-by-step diagrams designed for QRadar analysts. Each playbook includes triggers, triage steps, decision logic, escalation criteria, quick L1 actions, example AQL queries, and a printable diagram for fast reference during shifts or training.
 
-<img width="408" height="257" alt="image" src="https://github.com/user-attachments/assets/f7da4695-c685-43a9-8ee2-49d6a891ace5" />
+![Uploading image.png…]()
+
 
 A practical collection of **SOC Level 1 playbooks** designed for **QRadar analysts**.
 
