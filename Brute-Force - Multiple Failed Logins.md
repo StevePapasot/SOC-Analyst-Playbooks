@@ -1,4 +1,7 @@
-## **Alert Example: “10 failed login attempts in 5 minutes from user X.”**
+### **Alert Example: “10 failed login attempts in 5 minutes from user X.”**
+
+<img width="697" height="798" alt="image" src="https://github.com/user-attachments/assets/b854c840-473c-40c0-8588-d879205cf452" />
+
 
 ### Scope / When to use
 
