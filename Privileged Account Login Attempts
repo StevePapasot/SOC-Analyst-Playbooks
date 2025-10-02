@@ -1,0 +1,40 @@
+
+
+# Trigger
+
+- Login attempts (failed or successful) for accounts in privileged groups (Domain Admins, IT admins, service accounts with high rights).
+- Multiple failures on a privileged account or a successful login from an unusual IP/device.
+
+# Quick Triage (L1 Steps)
+
+- Alert Details → username, group membership, src IP, host, timestamp, event IDs.
+- Check QRadar: Authentication success/failure events (4624/4625), account change events, group membership changes.
+- Enrich IP & host: QRadar TI, reverse DNS, ASN, endpoint name and last known user.
+- User Context: Is this a scheduled admin task, maintenance window, or known admin remote access?
+
+# Decision Logic
+
+- Known admin maintenance / scheduled run from known host/IP → monitor/close (FP).
+- Multiple failures or success from malicious/unusual IP/device → escalate immediately.
+- Privileged account used to access sensitive systems or other accounts → escalate.
+
+# Escalation Criteria
+
+Escalate if any:
+
+- Successful login from unusual/malicious IP for privileged account.
+- Multiple failed attempts followed by success on privileged account.
+- New admin/group addition events coinciding with logins.
+- Correlated alerts: lateral movement, suspicious process, data access spikes.
+
+# L1 Actions
+
+- Document time, privileged username, src IP, host, event IDs, group membership snapshot.
+- Export QRadar offense, timeline, and relevant events (4624/4625, 4728/4729 if present).
+- Enrich and screenshot evidence. Contact admin owner/IT to confirm authorized activity.
+- If policy allows: request immediate account lock or session revoke; escalate to L2/IR for containment.
+
+# False Positive Examples
+
+- Scheduled automated patching or admin scripts running from known management hosts.
+- Legitimate cross-office admin tasks via corporate VPN or bastion host.
