@@ -1,5 +1,4 @@
 
-
 # Trigger
 
 - Login attempts (failed or successful) for accounts in privileged groups (Domain Admins, IT admins, service accounts with high rights).
