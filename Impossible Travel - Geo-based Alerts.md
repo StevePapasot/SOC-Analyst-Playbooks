@@ -11,8 +11,8 @@ It means that the user was successfully loggedin or tries to login from two IPs 
 
 ---
 
-#Investigation
-##STEP 1. Gather information:
+# Investigation
+## STEP 1. Gather information:
 - Username
 - Source IP
 - Destination IP
@@ -22,14 +22,14 @@ It means that the user was successfully loggedin or tries to login from two IPs 
 
 ---
 
-###WHAT AUTH TYPES MEAN?
+### WHAT AUTH TYPES MEAN?
 1. Successful Login = Creds Worked -> A)Compromised Credentials
                                       B)Legitimate User login
 2. Failed Login -> A) Brute-force (5 attempts in 2 minutes)
                    B) Compromised credentials tested
                    C) Recon
 
-##STEP 2. Behavior:
+## STEP 2. Behavior:
 1) Check if the user have done it in the past.
 2) Check all the source IPs.
 
