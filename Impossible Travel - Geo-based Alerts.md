@@ -21,11 +21,10 @@ It means that the user was successfully loggedin or tries to login from two IPs 
 - Log source
 - Auth Type (Success/Fail)
 
----
 
 ### WHAT AUTH TYPES MEAN?
-1. Successful Login = Creds Worked -> A)Compromised Credentials
-                                      B)Legitimate User login
+1. Successful Login = Creds Worked -> A) Compromised Credentials 
+                                      B) Legitimate User login
 2. Failed Login -> A) Brute-force (5 attempts in 2 minutes)
                    B) Compromised credentials tested
                    C) Recon
@@ -33,5 +32,27 @@ It means that the user was successfully loggedin or tries to login from two IPs 
 ## STEP 2. Behavior:
 1) Check if the user have done it in the past.
 2) Check all the source IPs.
+
+<!> IMPORTANT: Check if the user is using VPN <!>
+
+### TIP: ip analyze checklist.
+1. OWNERSHIP (ASN) -> WHO OWNS THE IP?
+2. GeoIP location
+3. Anonymous Proxy (VT)
+4. Reputation Check (VT, AbuseIPDB)
+5. Passive DNS/Hostnames (Any linked domains? DNS/VT)
+6. Check if used before (7 or 30 days TimeFrame)
+7. Login Method Used (Raw Logs - Password or MFA use)
+8. Log Source
+
+
+
+
+
+
+
+
+
+
 
 
